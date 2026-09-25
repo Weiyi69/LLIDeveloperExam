@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f7f9f8;
+  color: #1e2b28;
+}
+
+.ant-typography {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ant-btn-primary {
+  background: #2f7561;
+  box-shadow: none;
+}
+
+.ant-btn-primary:hover {
+  background: #245e4e !important;
+}
+
+.ant-menu-item-selected {
+  background: #245e4e !important;
+}
+
+.ant-card {
+  box-shadow: none;
+}
+
+.ant-table-thead > tr > th {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #74877e;
+  background: #fbfcfa;
+}
+
+.ant-table-tbody > tr > td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

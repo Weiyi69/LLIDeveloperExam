@@ -1,0 +1,216 @@
+:root {
+  color: #f0f0f0;
+  background: #050505;
+}
+
+body {
+  background: #050505;
+  color: #f0f0f0;
+}
+
+.workspace-shell,
+.workspace-shell > .ant-layout {
+  background: #050505;
+}
+
+.workspace-shell .workspace-sider {
+  background: #080808 !important;
+  border-right: 1px solid #242424;
+}
+
+.workspace-brand {
+  color: #f5f5f5;
+}
+
+.workspace-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 70px;
+  padding: 0 18px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #242424;
+}
+
+.workspace-profile:hover {
+  color: #ffffff;
+  background: #151515;
+}
+
+.workspace-profile .ant-avatar {
+  flex: 0 0 34px;
+}
+
+.workspace-profile-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.workspace-profile-copy strong,
+.workspace-profile-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workspace-profile-copy strong {
+  color: #f5f5f5;
+  font-size: 14px;
+}
+
+.workspace-profile-copy small {
+  margin-top: 3px;
+  color: #b8b8b8;
+  font-size: 11px;
+}
+
+.workspace-brand small,
+.header-user,
+.ant-typography-secondary,
+.ant-card .ant-typography-secondary {
+  color: #969696 !important;
+}
+
+.workspace-sider .ant-menu-item {
+  color: #b8b8b8 !important;
+}
+
+.workspace-shell .workspace-sider .ant-menu-item-selected {
+  background: #1677ff !important;
+  color: #ffffff !important;
+}
+
+.workspace-sider .ant-menu-item:hover {
+  background: rgba(0, 0, 0, 0.14) !important;
+  color: #ffffff !important;
+}
+
+.workspace-shell .workspace-header {
+  background: #0a0a0a;
+  border-bottom-color: #242424;
+}
+
+.workspace-header .ant-btn {
+  color: #bdbdbd;
+}
+
+.workspace-content {
+  background: #050505;
+}
+
+.dashboard-heading h1,
+.dashboard-heading h2,
+.dashboard-heading h3,
+.dashboard-heading h4,
+.dashboard-heading h5,
+.dashboard-heading h6,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6,
+.ant-typography {
+  color: #f0f0f0;
+}
+
+.eyebrow {
+  color: #8f9aa8;
+}
+
+.ant-tag {
+  border-color: #3d3d3d;
+}
+
+.ant-progress-text,
+.ant-statistic-content,
+.ant-statistic-content-value {
+  color: #f5f5f5 !important;
+}
+
+.workspace-table-row .ant-progress-text,
+.ant-table-tbody .ant-progress-text {
+  color: #f5f5f5 !important;
+  font-weight: 600;
+}
+
+.workspace-table-row .ant-progress-inner {
+  background: #3a3a3a !important;
+}
+
+.project-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 126px;
+}
+
+.project-progress .ant-progress {
+  flex: 1;
+}
+
+.project-progress > span {
+  color: #ffffff !important;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.workspace-table-row strong,
+.workspace-table-row .ant-typography,
+.workspace-table-row .ant-btn-link {
+  color: #f5f5f5 !important;
+}
+
+.person-avatar,
+.initials {
+  background: #203c5e !important;
+  color: #8fc2ff !important;
+}
+
+.department-row,
+.workspace-table-row {
+  border-color: #2d2d2d !important;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.ant-form-item-explain-error,
+.ant-form-item-required::before {
+  color: #ff7875 !important;
+}
+
+.ant-empty-description,
+.ant-pagination,
+.ant-pagination-item a,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  color: #b0b0b0 !important;
+}
+
+.ant-alert,
+.ant-message-notice-content,
+.ant-notification-notice,
+.ant-popconfirm,
+.ant-popover-inner {
+  background: #1a1a1a !important;
+  color: #eeeeee;
+  border: 1px solid #333333;
+}
+
+.ant-alert-message,
+.ant-alert-description,
+.ant-popconfirm-message-title,
+.ant-popover-inner-content {
+  color: #eeeeee !important;
+}
+
+.ant-tooltip-inner {
+  color: #ffffff;
+  background: #262626;
+}

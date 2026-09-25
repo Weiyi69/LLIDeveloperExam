@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const controller = require('../controllers/employeeController');
+const { authenticate, authorize } = require('../middleware/auth');
+const { employeeRules, idRule } = require('../utils/validation');
+router.use(authenticate);
+router.get('/', controller.list);
+router.get('/:id', idRule, controller.get);
+router.post('/', authorize('admin'), employeeRules, controller.create);
+router.put('/:id', authorize('admin'), idRule, employeeRules, controller.update);
+router.delete('/:id', authorize('admin'), idRule, controller.remove);
+module.exports = router;

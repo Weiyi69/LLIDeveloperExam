@@ -1,0 +1,211 @@
+.global-search,
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-picker {
+  background: #111111 !important;
+  border-color: #3a3a3a !important;
+  color: #eeeeee !important;
+}
+
+.global-search input,
+.ant-input,
+.ant-input::placeholder,
+.ant-input-affix-wrapper input,
+.ant-select-selection-item,
+.ant-select-selection-placeholder,
+.ant-picker-input > input {
+  color: #eeeeee !important;
+}
+
+.ant-input::placeholder,
+.ant-input-affix-wrapper input::placeholder,
+.ant-picker-input > input::placeholder {
+  color: #777777 !important;
+}
+
+.ant-btn-primary {
+  background: #1677ff !important;
+  border-color: #1677ff !important;
+}
+
+.ant-btn-primary:hover {
+  background: #4096ff !important;
+  border-color: #4096ff !important;
+}
+
+.ant-btn {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.ant-btn.ant-btn-sm {
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.ant-btn.ant-btn-lg {
+  height: 40px;
+  padding: 0 16px;
+}
+
+.ant-btn-primary {
+  color: #ffffff !important;
+  background: #1677ff !important;
+  border-color: #1677ff !important;
+}
+
+.ant-btn-primary:focus-visible,
+.ant-btn-primary:hover {
+  background: #4096ff !important;
+  border-color: #4096ff !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.24);
+}
+
+.ant-btn-default {
+  color: #e6e6e6;
+  background: #171717;
+  border-color: #444444;
+}
+
+.ant-btn-default:focus-visible,
+.ant-btn-default:hover {
+  color: #ffffff !important;
+  background: #222222 !important;
+  border-color: #686868 !important;
+}
+
+.ant-btn-text {
+  color: #bcbcbc;
+}
+
+.ant-btn-text:focus-visible,
+.ant-btn-text:hover {
+  color: #ffffff !important;
+  background: #252525 !important;
+}
+
+.ant-btn-link {
+  color: #6aaaff;
+}
+
+.ant-btn-link:focus-visible,
+.ant-btn-link:hover {
+  color: #91caff !important;
+  background: transparent !important;
+}
+
+.ant-btn-dangerous.ant-btn-default,
+.ant-btn-dangerous.ant-btn-text {
+  color: #ff7875;
+}
+
+.ant-btn-dangerous.ant-btn-default:hover,
+.ant-btn-dangerous.ant-btn-text:hover {
+  color: #ffaaa8 !important;
+  border-color: #d9363e !important;
+  background: rgba(255, 77, 79, 0.12) !important;
+}
+
+.ant-btn:disabled,
+.ant-btn.ant-btn-disabled {
+  color: #666666 !important;
+  background: #1b1b1b !important;
+  border-color: #303030 !important;
+}
+
+.ant-btn-circle,
+.ant-btn-icon-only {
+  padding-inline: 0;
+}
+
+.ant-btn-default,
+.ant-btn-text,
+.ant-btn-link {
+  color: #d0d0d0;
+}
+
+.ant-btn-default {
+  background: #151515;
+  border-color: #3a3a3a;
+}
+
+.ant-btn-default:hover,
+.ant-btn-text:hover {
+  color: #ffffff !important;
+  border-color: #1677ff;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-picker {
+  min-height: 36px;
+  border-radius: 6px !important;
+}
+
+.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: #4096ff !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2) !important;
+}
+
+.ant-dropdown,
+.ant-dropdown-menu,
+.ant-select-dropdown,
+.ant-picker-dropdown .ant-picker-panel-container {
+  background: #1a1a1a !important;
+}
+
+.ant-dropdown-menu-item,
+.ant-select-item,
+.ant-picker-header,
+.ant-picker-content th,
+.ant-picker-cell,
+.ant-picker-footer {
+  color: #eeeeee !important;
+}
+
+.ant-dropdown-menu-item:hover,
+.ant-select-item-option-active,
+.ant-select-item-option-selected {
+  background: #123a6c !important;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background: #1677ff !important;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.ant-form-item-explain-error,
+.ant-form-item-required::before {
+  color: #ff7875 !important;
+}
+
+.ant-menu-item:focus-visible,
+.ant-btn:focus-visible,
+.ant-select:focus-visible,
+.ant-input:focus-visible,
+a:focus-visible {
+  outline: 2px solid #69b1ff;
+  outline-offset: 2px;
+}
+
+.ant-tag {
+  font-weight: 500;
+  line-height: 22px;
+}

@@ -1,0 +1,137 @@
+/* The project editor intentionally stays light for form readability. */
+.project-modal .ant-modal,
+.project-modal .ant-modal-content,
+.project-modal .ant-modal-header,
+.project-modal .ant-modal-body,
+.project-modal .ant-modal-footer,
+.task-modal .ant-modal,
+.task-modal .ant-modal-content,
+.task-modal .ant-modal-header,
+.task-modal .ant-modal-body,
+.task-modal .ant-modal-footer {
+  background: #ffffff !important;
+  color: #1f1f1f !important;
+}
+
+.project-modal .ant-modal-content,
+.task-modal .ant-modal-content {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-modal .ant-modal-title,
+.project-modal .ant-form-item-label > label,
+.task-modal .ant-modal-title,
+.task-modal .ant-form-item-label > label {
+  color: #1f1f1f !important;
+  font-weight: 600;
+}
+
+.project-modal .ant-form-item-required::before,
+.task-modal .ant-form-item-required::before {
+  color: #ff4d4f !important;
+}
+
+.project-modal .ant-input,
+.project-modal .ant-input-number,
+.project-modal .ant-input-number-input,
+.project-modal .ant-select-selector,
+.project-modal .ant-picker,
+.task-modal .ant-input,
+.task-modal .ant-input-number,
+.task-modal .ant-input-number-input,
+.task-modal .ant-select-selector,
+.task-modal .ant-picker {
+  background: #ffffff !important;
+  border-color: #d9d9d9 !important;
+  color: #1f1f1f !important;
+}
+
+.project-modal .ant-input::placeholder,
+.project-modal .ant-input-number-input::placeholder,
+.project-modal .ant-picker-input > input::placeholder,
+.project-modal .ant-select-selection-placeholder,
+.task-modal .ant-input::placeholder,
+.task-modal .ant-input-number-input::placeholder,
+.task-modal .ant-picker-input > input::placeholder,
+.task-modal .ant-select-selection-placeholder {
+  color: #8c8c8c !important;
+}
+
+.project-modal .ant-input:focus,
+.project-modal .ant-input-number:focus,
+.project-modal .ant-input-number-focused,
+.project-modal .ant-select-focused .ant-select-selector,
+.project-modal .ant-picker-focused,
+.task-modal .ant-input:focus,
+.task-modal .ant-input-number:focus,
+.task-modal .ant-input-number-focused,
+.task-modal .ant-select-focused .ant-select-selector,
+.task-modal .ant-picker-focused {
+  border-color: #1677ff !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15) !important;
+}
+
+.project-modal .ant-input-number-input,
+.project-modal .ant-select-selection-item,
+.project-modal .ant-picker-input > input,
+.task-modal .ant-input-number-input,
+.task-modal .ant-select-selection-item,
+.task-modal .ant-picker-input > input {
+  color: #1f1f1f !important;
+}
+
+.employee-modal .ant-modal,
+.employee-modal .ant-modal-content,
+.employee-modal .ant-modal-header,
+.employee-modal .ant-modal-body,
+.employee-modal .ant-modal-footer {
+  background: #ffffff !important;
+  color: #1f1f1f !important;
+}
+
+.employee-modal .ant-modal-content {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employee-modal .ant-modal-title,
+.employee-modal .ant-form-item-label > label {
+  color: #1f1f1f !important;
+  font-weight: 600;
+}
+
+.employee-modal .ant-form-item-required::before {
+  color: #ff4d4f !important;
+}
+
+.employee-modal .ant-input,
+.employee-modal .ant-input-number,
+.employee-modal .ant-input-number-input,
+.employee-modal .ant-select-selector {
+  background: #ffffff !important;
+  border-color: #d9d9d9 !important;
+  color: #1f1f1f !important;
+}
+
+.employee-modal .ant-input::placeholder,
+.employee-modal .ant-input-number-input::placeholder,
+.employee-modal .ant-select-selection-placeholder,
+.employee-modal .ant-select-arrow {
+  color: #8c8c8c !important;
+}
+
+.employee-modal .ant-input:focus,
+.employee-modal .ant-input-number:focus,
+.employee-modal .ant-input-number-focused,
+.employee-modal .ant-select-focused .ant-select-selector {
+  border-color: #1677ff !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15) !important;
+}
+
+.employee-modal .ant-input-number-input,
+.employee-modal .ant-select-selection-item {
+  color: #1f1f1f !important;
+}

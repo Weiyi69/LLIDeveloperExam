@@ -1,0 +1,202 @@
+.ant-table,
+.ant-table-container,
+.ant-table-content,
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  background: #141414 !important;
+  color: #eeeeee !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #1b1b1b !important;
+  color: #cfcfcf !important;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #202020 !important;
+}
+
+.table-card .ant-card-body {
+  padding: 18px;
+}
+
+.table-card .toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.table-card .toolbar > .ant-input-affix-wrapper {
+  flex: 1;
+  max-width: 420px;
+}
+
+.table-card .toolbar > .ant-select {
+  min-width: 150px;
+}
+
+.table-card .toolbar > .ant-select .ant-select-selector {
+  background: #111111 !important;
+  border-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+.table-card .toolbar > .ant-select .ant-select-selection-placeholder,
+.table-card .toolbar > .ant-select .ant-select-selection-item,
+.table-card .toolbar > .ant-select .ant-select-arrow {
+  color: #ffffff !important;
+}
+
+.table-card .ant-table {
+  font-size: 14px;
+}
+
+.table-card .ant-table-tbody > tr > td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  vertical-align: middle;
+}
+
+.table-card .person-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.table-card .person-cell > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.table-card .person-cell strong,
+.table-card .person-cell .ant-typography {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-card .person-cell strong {
+  color: #f5f5f5 !important;
+  font-weight: 600;
+}
+
+.table-card .person-cell .ant-typography {
+  color: #bdbdbd !important;
+  font-size: 12px;
+}
+
+.table-card .initials {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.table-card .ant-table-thead > tr > th {
+  white-space: nowrap;
+}
+
+.table-card .ant-pagination {
+  margin-bottom: 0;
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.report-scope-select {
+  min-width: 150px;
+}
+
+.report-type-select {
+  min-width: 120px;
+}
+
+.report-scope-select .ant-select-selector {
+  min-height: 36px;
+}
+
+.report-table .ant-card-head-title {
+  color: #f5f5f5 !important;
+  font-weight: 600;
+}
+
+.ant-pagination-item,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background: #171717;
+  border-color: #3a3a3a;
+}
+
+.ant-pagination-item-active {
+  background: #123a6c;
+  border-color: #1677ff;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff !important;
+}
+
+.table-card .ant-pagination .ant-pagination-item-active {
+  background: #111111 !important;
+  border-color: #1677ff !important;
+}
+
+.table-card .ant-pagination .ant-pagination-item-active a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.table-card .ant-pagination .ant-pagination-item,
+.table-card .ant-pagination .ant-pagination-prev .ant-pagination-item-link,
+.table-card .ant-pagination .ant-pagination-next .ant-pagination-item-link,
+.table-card .ant-pagination-options .ant-select-selector {
+  background: #111111 !important;
+  border-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+.table-card .ant-pagination .ant-pagination-item a,
+.table-card .ant-pagination .ant-pagination-item-link,
+.table-card .ant-pagination-options .ant-select-selection-item,
+.table-card .ant-pagination-options .ant-select-arrow {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .report-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .report-actions .ant-btn {
+    flex: 1;
+  }
+
+  .report-actions .report-scope-select {
+    flex: 1;
+  }
+
+  .table-card .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .table-card .toolbar > .ant-input-affix-wrapper,
+  .table-card .toolbar > .ant-select {
+    max-width: none;
+    width: 100%;
+  }
+}
