@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Avatar, Button, Dropdown, Grid, Input, Layout, Menu } from 'antd'
+import { AutoComplete, Avatar, Button, Dropdown, Grid, Input, Layout, Menu } from 'antd'
 import {
   AppstoreOutlined,
   BarChartOutlined,
@@ -14,6 +14,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons'
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
+import api from '../services/api'
 
 const { Sider, Header, Content } = Layout
 
@@ -25,16 +26,65 @@ const getRoleValue = (user) => {
 export default function AppLayout() {
   const [collapsed, setCollapsed] = useState(false)
   const [, setRoleVersion] = useState(0)
+  const [searchValue, setSearchValue] = useState('')
+  const [searchOptions, setSearchOptions] = useState([])
   const location = useLocation()
   const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem('lli-user') || 'null')
   const screens = Grid.useBreakpoint()
-  const profileName =
-    user?.username ||
-    user?.email ||
-    'Account'
+  const profileName = user?.username || user?.email || 'Account'
   const profileEmail = user?.email || 'Signed-in account'
   const role = getRoleValue(user)
+
+  const handleGlobalSearch = async (value) => {
+    const query = value.trim()
+    setSearchValue(value)
+
+    if (!query) {
+      setSearchOptions([])
+      return
+    }
+
+    try {
+      const { data } = await api.get('/employees', {
+        params: { search: query, page: 1, pageSize: 5 },
+      })
+
+      const records = data?.data?.records || []
+      setSearchOptions(
+        records.map((person) => ({
+          value: `${person.first_name} ${person.last_name}`,
+          label: (
+            <div className="global-search-result">
+              <span className="person-avatar">{person.first_name[0]}{person.last_name[0]}</span>
+              <div className="global-search-copy">
+                <strong>{person.first_name} {person.last_name}</strong>
+                <small>{person.department}</small>
+              </div>
+            </div>
+          ),
+          person,
+        })),
+      )
+    } catch (error) {
+      setSearchOptions([])
+    }
+  }
+
+  const handleSelectSearchResult = (_, option) => {
+    const selectedName = option?.person
+      ? `${option.person.first_name} ${option.person.last_name}`
+      : searchValue
+
+    setSearchValue(selectedName)
+    setSearchOptions([])
+    navigate(`/employees?search=${encodeURIComponent(selectedName)}`)
+  }
+
+  useEffect(() => {
+    setSearchValue('')
+    setSearchOptions([])
+  }, [location.pathname])
 
   useEffect(() => {
     const handleRoleChange = () => {
@@ -87,11 +137,22 @@ export default function AppLayout() {
               icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
               onClick={() => setCollapsed(!collapsed)}
             />
-            <Input
+            <AutoComplete
               className="global-search"
-              prefix={<SearchOutlined />}
+              value={searchValue}
+              open={Boolean(searchValue.trim())}
+              options={searchOptions}
+              onSearch={handleGlobalSearch}
+              onChange={(value) => setSearchValue(value)}
+              onSelect={handleSelectSearchResult}
+              onClear={() => setSearchValue('')}
+              allowClear
+              notFoundContent={searchValue.trim() ? 'No people found' : null}
+              dropdownMatchSelectWidth={false}
               placeholder="Search people, departments..."
-            />
+            >
+              <Input prefix={<SearchOutlined />} />
+            </AutoComplete>
           </div>
 
           <div className="header-user">

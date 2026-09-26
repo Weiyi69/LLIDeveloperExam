@@ -180,6 +180,80 @@
   background: #123a6c !important;
 }
 
+.global-search,
+.global-search .ant-select-selector,
+.global-search .ant-input-affix-wrapper,
+.global-search .ant-input-affix-wrapper:hover,
+.global-search .ant-input-affix-wrapper:focus,
+.global-search .ant-input-affix-wrapper-focused {
+  background: #111111 !important;
+  border-color: #3a3a3a !important;
+  color: #eeeeee !important;
+}
+
+.global-search .ant-select-dropdown {
+  background: #171717 !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 10px !important;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.28) !important;
+  padding: 6px 0;
+}
+
+.global-search .ant-select-item {
+  color: #f3f3f3 !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  margin: 2px 6px;
+}
+
+.global-search .ant-select-item-option-active,
+.global-search .ant-select-item-option-selected {
+  background: #1d3a5f !important;
+}
+
+.global-search-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.global-search-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.global-search-copy strong {
+  color: #ffffff !important;
+  font-size: 13px;
+}
+
+.global-search-copy small {
+  color: #b8c0c6 !important;
+  font-size: 11px;
+}
+
+.global-search .ant-select-clear,
+.global-search .ant-select-clear:hover,
+.global-search .ant-select-clear:focus,
+.global-search .ant-select-clear:active,
+.global-search .ant-input-clear-icon,
+.global-search .ant-input-clear-icon:hover,
+.global-search .ant-input-clear-icon:focus,
+.global-search .ant-input-clear-icon:active {
+  background: #111111 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+.global-search .ant-select-clear svg,
+.global-search .ant-input-clear-icon svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
 .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
 .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
 .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {

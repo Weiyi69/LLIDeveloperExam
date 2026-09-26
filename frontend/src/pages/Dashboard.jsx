@@ -39,7 +39,10 @@ export default function Dashboard() {
       .get('/dashboard')
       .then(({ data: response }) => setData(response.data))
       .catch((requestError) => {
-        setError(requestError.response?.data?.error || 'The API server is unavailable. Start the backend and try again.')
+        setError(
+          requestError.response?.data?.error ||
+            'The API server is unavailable. Start the backend and try again.',
+        )
       })
   }
 
@@ -89,7 +92,9 @@ export default function Dashboard() {
       message.success('Employee deleted')
       load()
     } catch (requestError) {
-      message.error(requestError.response?.data?.error || 'Could not delete employee')
+      message.error(
+        requestError.response?.data?.error || 'Could not delete employee',
+      )
     }
   }
 

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Button, Card, Form, Input, Modal, Select, Space, Table, Tag, Typography, Popconfirm, message } from 'antd'
 import { PlusOutlined, SearchOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import { useSearchParams } from 'react-router-dom'
 import api from '../services/api'
 
 const { Title, Text } = Typography
@@ -22,11 +23,21 @@ export default function Employees() {
   const [form] = Form.useForm()
   const [rows, setRows] = useState([])
   const [total, setTotal] = useState(0)
+  const [searchParams, setSearchParams] = useSearchParams()
   const [params, setParams] = useState({ page: 1, pageSize: 8, search: '', status: '' })
   const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(null)
   const [loading, setLoading] = useState(false)
   const isAdmin = localStorage.getItem('lli-user-role') === 'admin'
+  const currentSearch = searchParams.get('search') || ''
+
+  useEffect(() => {
+    setParams((current) => ({
+      ...current,
+      search: currentSearch,
+      page: 1,
+    }))
+  }, [currentSearch])
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -134,7 +145,19 @@ export default function Employees() {
             allowClear
             prefix={<SearchOutlined />}
             placeholder="Search name, email or department"
-            onChange={(event) => setParams({ ...params, page: 1, search: event.target.value })}
+            value={currentSearch}
+            onChange={(event) => {
+              const value = event.target.value
+              const nextParams = new URLSearchParams(searchParams)
+
+              if (value.trim()) {
+                nextParams.set('search', value.trim())
+              } else {
+                nextParams.delete('search')
+              }
+
+              setSearchParams(nextParams)
+            }}
           />
           <Select
             value={params.status || undefined}
